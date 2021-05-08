@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 8vh;
+            background-color: blueviolet;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+        }
+
+        .logo {
+            color: whitesmoke;
+            letter-spacing: 0.1rem;
+            font-size: 1.25rem;
+        }
+
+        .nav-link {
+            margin-left: 25rem;
+            display: flex;
+            justify-content: space-around;
+            width: 40%;
+        }
+
+        .nav-link li {
+            list-style: none;
+        }
+
+        .nav-link a {
+            color: whitesmoke;
+            text-decoration: none;
+            letter-spacing: 0.18rem;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .cart1 {
+            color: white;
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+
+        .cart2 {
+            color: white;
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+
+        .section-header {
+            width: 100%;
+            text-align: center;
+            margin-top: 6rem;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        .cart-page {
+            margin: 40px auto;
+        }
+
+        table {
+            width: 60%;
+            height: auto;
+            border-collapse: collapse;
+            margin: 0;
+        }
+
+        .cart-row {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: justify;
+        }
+
+        th {
+            text-align: left;
+            padding: 5px;
+            color: #fff;
+            background: teal;
+            font-weight: normal;
+        }
+
+        td {
+            padding: 10px 50px;
+        }
+
+        .Quantity-cart {
+            width: 60px;
+            height: 20px;
+            padding: 5px;
+        }
+
+        td img {
+            width: 8rem;
+            height: 8rem;
+            margin-right: 10px;
+        }
+
+        .btn-danger {
+            margin-left: 2rem;
+            background-color: rgb(3, 44, 44);
+            color: white;
+            cursor: pointer;
+            font-size: small;
+        }
+
+        th:first-child {
+            text-align: left;
+        }
+
+        th:nth-child(2) {
+            text-align: left;
+        }
+
+        th:last-child {
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            text-align: right;
+            margin-bottom: 5rem;
+        }
+
+        td:last-child {
+            text-align: right;
+        }
+    </style>
+    <title>E commerce website | Buy ethinic wear</title>
+    <div>
+        <nav class="nav">
+            <div class="logo">
+                <a href="http://127.0.0.1:5500/index.html#">
+                    <h3> EthiNicity</h3>
+                </a>
+            </div>
+            <ul class="nav-link">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">projects</a> </li>
+            </ul>
+            <i class="fas fa-shopping-cart fa-lg cart1"> Cart</i>
+            <i class="fas fa-bars fa-lg cart2"></i>
+        </nav>
+
+    </div>
+    <section class="content-section">
+        <h2 class="section-header">CART</h2>
+        <table class="cart-page">
+            <tr>
+                <th>Product</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td class="cart-item">
+                    <div class="cart-row">
+                        <img src="lehenga 6.jpg" alt="">
+                        <div>
+                            <p class="cart-item-title">Zari embroidery wedding lehenga</p>
+                            <small class="price">Price: Rs.5000</small><br><input class="Quantity-cart" type="number"
+                                value="1">
+                        </div>
+                    </div>
+                </td>
+                <td>Rs. 5000<button class="btn-danger" type="button">Remove</button></td>
+            </tr>
+            <tr>
+                <td class="cart-item">
+                    <div class="cart-row">
+                        <img src="lehenga 7.jpg" alt="">
+                        <div>
+                            <p class="cart-item-title">Peach chiffon Ethinic Partywear</p>
+                            <small class="price">Price: Rs.4000</small><br><input class="Quantity-cart" type="number"
+                                value="1">
+                        </div>
+                    </div>
+                </td>
+                <td>Rs. 4000 <button class="btn-danger" type="button">Remove</button></td>
+            </tr>
+            <tr>
+                <td class="cart-item">
+                    <div class="cart-row">
+                        <img src="lehenga 8.jpg" alt="">
+                        <div>
+                            <p class="cart-item-title">Grey Net embroidery anarkali suit</p>
+                            <small class="price">Price: Rs.5500</small><br><input class="Quantity-cart" type="number"
+                                value="1">
+                        </div>
+                    </div>
+                </td>
+                <td>Rs. 5500 <button class="btn-danger" type="button">Remove</button></td>
+            </tr>
+            <tr>
+                <td class="cart-item">
+                    <div class="cart-row">
+                        <img src="lehenga 9.jpg" alt="">
+                        <div>
+                            <p class="cart-item-title">Granite Coloured Handmade lehenga</p>
+                            <small class="price">Price: Rs.6500</small><br><input class="Quantity-cart" type="number"
+                                value="1">
+                        </div>
+                    </div>
+                </td>
+                <td>Rs. 6500 <button class="btn-danger" type="button">Remove</button></td>
+            </tr>
+            <tr>
+                <td class="cart-item">
+                    <div class="cart-row">
+                        <img src="lehenga 10.jpg" alt="">
+                        <div>
+                            <p class="cart-item-title">Red Sabyasachi wedding lehenga</p>
+                            <small class="price">Price: Rs.20000</small><br><input class="Quantity-cart" type="number"
+                                value="1">
+                        </div>
+                    </div>
+                </td>
+                <td>Rs. 20000 <button class="btn-danger" type="button">Remove</button></td>
+            </tr>
+            <tr>
+                <td class="cart-item">
+                    <div class="cart-row">
+                        <img src="lehenga 11.jpg" alt="">
+                        <div>
+                            <p class="cart-item-title">Wine pink ombre satin lehenga</p>
+                            <small class="price">Price: Rs.12000</small><br><input class="Quantity-cart" type="number"
+                                value="1">
+                        </div>
+                    </div>
+                </td>
+                <td>Rs. 12000 <button class="btn-danger" type="button">Remove</button></td>
+            </tr>
+            <tr>
+                <td class="cart-item">
+                    <div class="cart-row">
+                        <img src="lehenga 12.jpg" alt="">
+                        <div>
+                            <p class="cart-item-title">Pink Chikankari Lehenga Choli</p>
+                            <small class="price">Price: Rs.10000</small><br><input class="Quantity-cart" type="number"
+                                value="1">
+                        </div>
+                    </div>
+                </td>
+                <td>Rs. 10000 <button class="btn-danger" type="button">Remove</button></td>
+            </tr>
+            <tr>
+                <td class="cart-item">
+                    <div class="cart-row">
+                        <img src="lehenga 13.jpg" alt="">
+                        <div>
+                            <p class="cart-item-title">Greyish mix coloured net lehenga choli</p>
+                            <small class="price">Price: Rs.15000</small><br><input class="Quantity-cart" type="number"
+                                value="1">
+                        </div>
+                    </div>
+                </td>
+                <td>Rs. 15000 <button class="btn-danger" type="button">Remove</button></td>
+            </tr>
+        </table>
+        <div class="container">
+            <h2>Total : <input type="text" class="total-cart" value="1"></h2>
+        </div>
+    </section>
+    <script src="./extra.js"></script>
+    </body>
+
+</html>

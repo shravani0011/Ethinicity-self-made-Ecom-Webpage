@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 8vh;
+            background-color: blueviolet;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+        }
+
+        .logo {
+            color: whitesmoke;
+            letter-spacing: 0.1rem;
+            font-size: 1.25rem;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: whitesmoke;
+        }
+
+        .nav-link {
+            background-color: blueviolet;
+            color: aliceblue;
+            font-weight: bold;
+            border: none;
+            margin-left: 40rem;
+            padding: 0.25rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .nav-link li {
+            list-style: none;
+        }
+
+        .nav-link a {
+            color: whitesmoke;
+            text-decoration: none;
+            letter-spacing: 0.18rem;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .iconShopping {
+            content: attr(data-count);
+            color: white;
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+
+        .small-container {
+            display: flex;
+            margin-left: 6.25rem;
+            width: 100%;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: justify;
+            padding: 8rem 8rem 0 15rem;
+        }
+
+        .col-5 {
+            margin-left: 5rem;
+        }
+
+        .p {
+            width: 30rem;
+            height: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: rgb(73, 8, 73);
+            color: #fff;
+            padding: 0.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 2rem;
+        }
+
+        table {
+            width: 60%;
+            height: auto;
+            border-collapse: collapse;
+            margin: 0;
+        }
+
+        .cart-row {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: justify;
+        }
+
+        th {
+            padding: 5px;
+            color: #fff;
+            background: teal;
+            font-weight: normal;
+        }
+
+        .Quantity-cart {
+            width: 60px;
+            height: 20px;
+            padding: 5px;
+        }
+
+        td img {
+            width: 8rem;
+            height: 8rem;
+            margin-right: 10px;
+        }
+
+        .btn-danger {
+            margin-left: 2rem;
+            background-color: rgb(3, 44, 44);
+            color: white;
+            cursor: pointer;
+            font-size: small;
+        }
+
+        .btn-danger a {
+            text-decoration: none;
+            color: white;
+        }
+
+        th:first-child {
+            text-align: left;
+        }
+
+        th:nth-child(2) {
+            text-align: left;
+        }
+
+        th:last-child {
+            text-align: center;
+        }
+
+        .container {
+            margin-left: 65rem;
+            text-align: right;
+            margin-bottom: 5rem;
+            display: flex;
+        }
+
+        .cart-total {
+            padding: 0.25rem;
+            font-size: large;
+        }
+
+
+        .cart-page {
+            margin: 40px auto;
+        }
+
+        #try {
+            display: none;
+        }
+
+        #myBtn {
+            background-color: blueviolet;
+            text-decoration: none;
+            color: cornsilk;
+            border: none;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Fallback color */
+            background-color: whitesmoke;
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .cart-page {
+            background-color: #fefefe;
+            margin-right: 10rem;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: red;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            padding-top: 1rem;
+            margin-right: 19rem;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .submit {
+            padding: 0.5rem;
+            font-style: oblique;
+            width: 6rem;
+            background-color: rgb(65, 5, 65);
+            color: white;
+            font-weight: bold;
+            border-radius: 1rem;
+            margin-left: 50rem;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .submit:hover {
+            background-color: lightslategray;
+        }
+
+        @media only screen and (max-width:768px) {
+            .nav {
+                width: 120%;
+            }
+
+            .container {
+                margin-left: 12rem;
+                text-align: right;
+                margin-bottom: 5rem;
+                display: flex;
+            }
+
+            .submit {
+                margin-left: 12rem;
+            }
+
+            .p {
+                width: 22rem;
+            }
+        }
+
+        @media only screen and (max-width:992px) {
+            .container {
+                margin-left: 20rem;
+                text-align: right;
+                margin-bottom: 5rem;
+                display: flex;
+            }
+
+            .submit {
+                margin-left: 16rem;
+            }
+
+            .modal {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width:600px) {
+            .nav {
+                display: block;
+                width: fit-content;
+            }
+
+            .p {
+                width: 20rem;
+                height: auto;
+            }
+        }
+    </style>
+    <title>Ethinicity | Zari embroidery wedding lehenga</title>
+    <div>
+        <nav class="nav">
+            <div class="logo">
+                <a href="index1.html">
+                    <h3><i class="fas fa-chess-queen">EthiNicity</i> </h3>
+                </a>
+            </div>
+            <select class="nav-link">
+                <option>Home</option>
+                <option>About</option>
+                <option>Work</option>
+                <option>projects</option>
+            </select>
+            <div class="iconShopping">
+                <button id="myBtn"> <i class="fas fa-shopping-cart fa-lg">
+                    </i></button>
+            </div>
+        </nav>
+
+    </div>
+</head>
+
+<body>
+
+    <section class="img-magnifier-container">
+        <div class="row">
+            <div class="myimage">
+                <img src="lehenga 10.jpg" style="width: 60vh; height: 60vh;" alt="">
+            </div>
+            <div class="col-5">
+                <p><a href="index1.html">Home</a>/ Featured product</p> <br>
+                <h1 class="Item-name">Red Sabyasachi wedding lehenga</h1> <br>
+                <h4>Rs. 20000.00</h4><br>
+                <div>
+                    <select>
+                        <option>Type</option>
+                        <option>Stitched</option>
+                        <option>Un-Stitched</option>
+                    </select>
+                    <a href="#try" class="btn" onclick="myFunction()">Add to cart</a>
+                </div> <br>
+                <h3>Product Details</h3> <br>
+                <p class="p">True magnificence comes out of your dressing design with this mauve colored lehenga
+                    kameez.The faux georgette suit is beautified with amazing embroidery with stone work which is
+                    eye
+                    catching. Comes along with faux georgette lehenga, santoon bottom and embroidered netted dupatta
+                    to
+                    complete the look. Women can buy this suit to wear for their upcoming functions, festivals,
+                    wedding
+                    functions or engagement ceremonies and occasions, where you want to be center of attraction.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="myModal" class="modal">
+        <table class="cart-page">
+            <tr>
+                <th>Product</th>
+            </tr>
+            <span class="close"><i class="far fa-times-circle"></i></span>
+            <tr id="try">
+                <td class="cart-item">
+                    <div class="cart-row">
+                        <img src="lehenga 10.jpg" alt="">
+                        <div>
+                            <p class="cart-item-title">Red Sabyasachi wedding lehenga</p>
+                            <small class="price">Price: Rs.20000</small><br>
+                            <input class="Quantity-cart" type="number" min="0" value="0">
+                        </div>
+                    </div>
+                </td>
+                <td><button class="btn-danger" type="button"><a href="lehenga 10.html">Remove</button></td> </a>
+            </tr>
+        </table>
+        <div class="container">
+            <h2>Total : </h2>
+            <span class="cart-total">000</span>
+        </div>
+        <button type="submit" class="submit">Purchase</button>
+    </section>
+    <script>
+        if (document.readyState == 'loading') {
+            document.addEventListener('DOMContentLoaded', ready)
+        } else {
+            ready()
+        }
+        function ready() {
+            var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+            console.log(removeCartItemButtons)
+
+            for (var i = 0; i < removeCartItemButtons.length; i++) {
+                var button = removeCartItemButtons[i]
+                button.addEventListener('click', removeCartItem);
+            }
+            var quantityInputs = document.getElementsByClassName('Quantity-cart');
+            for (var i = 0; i < quantityInputs.length; i++) {
+                var input = quantityInputs[i];
+                input.addEventListener('change', quantityChanged)
+            }
+        }
+
+        function removeCartItem(event) {
+            var buttonClicked = event.target;
+            buttonClicked.parentElement.parentElement.remove()
+            document.getElementsByClassName('cart-total')[0].innerText = '000';
+            updateCartTotal()
+        }
+        function quantityChanged(event) {
+            var input = event.target
+            updateCartTotal()
+        }
+        function updateCartTotal() {
+            var cartItemContainer = document.getElementsByClassName('cart-item')[0];
+            var cartRows = cartItemContainer.getElementsByClassName('cart-row');
+            var total = 0
+            for (var i = 0; i < cartRows.length; i++) {
+                var cartRow = cartRows[i];
+                var priceElement = cartRow.getElementsByClassName('price')[0];
+                var quantityElement = cartRow.getElementsByClassName('Quantity-cart')[0];
+                var price = parseFloat(priceElement.innerText.replace('Price: Rs.', ''));
+                var quantity = quantityElement.value
+                total = total + (price * quantity);
+            }
+            document.getElementsByClassName('cart-total')[0].innerText = 'Rs.' + total;
+        }
+
+        function myFunction() {
+            const cartSection = document.getElementById("try");
+            cartSection.style.display = "block";
+            alert('Added to Cart!! Kindly check Cart section');
+        }
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        const submit = document.getElementsByClassName('submit')[0];
+        submit.addEventListener('click', purchaseClicked);
+        function purchaseClicked() {
+            if (document.getElementsByClassName('cart-total')[0].innerText > 'Rs.' + 0000) {
+                submit.innerHTML = "Thank You for the Purchase !!";
+            } else {
+                alert('kindly put Quantity!!');
+            }
+        }
+    </script>
+</body>
+
+</html>

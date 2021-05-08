@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url('lehenga photo.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            color: white;
+            position: absolute;
+            margin: 20rem 20rem 20rem 40rem;
+            border: 12px black;
+        }
+
+        .container h1 {
+            margin-bottom: 2rem;
+            color: azure;
+            border-bottom: 0.25rem solid rgb(7, 53, 7);
+            font-weight: normal;
+        }
+
+        .container input {
+            margin-bottom: 1rem;
+            width: 15rem;
+            background: none;
+            border: none;
+            border-bottom: 0.25rem solid rgb(7, 53, 7);
+            color: white;
+            padding: 0.5rem;
+            font-size: 16px;
+        }
+
+        .btn {
+            cursor: pointer;
+            width: 3rem;
+            background: none;
+        }
+
+        .btn:hover {
+            background-color: ivory;
+        }
+
+        h2 {
+            position: absolute;
+            color: thistle;
+            margin: 8rem 35rem;
+            width: 0ch;
+            border-right: 1px solid burlywood;
+            overflow: hidden;
+            animation: type 8s steps(34) infinite alternate;
+            white-space: nowrap;
+        }
+
+        @keyframes type {
+            0% {
+                width: 0ch;
+            }
+
+            50% {
+                width: 34ch;
+            }
+        }
+
+
+        @media only screen and (max-width: 768px) {
+
+            /* For mobile phones: */
+            .container {
+                color: white;
+                position: absolute;
+                justify-content: center;
+            }
+
+            .container h1 {
+                margin-bottom: 2rem;
+                color: azure;
+                border-bottom: 0.25rem solid rgb(7, 53, 7);
+                font-weight: normal;
+                font-size: 1rem;
+            }
+
+            .container input {
+                font-size: 12px;
+            }
+
+            h2 {
+                position: absolute;
+                color: thistle;
+                margin: 5rem 40rem;
+                font-size: 0.5rem;
+                width: 0ch;
+                border-right: 1px solid burlywood;
+                overflow: hidden;
+                animation: type 8s steps(34) infinite alternate;
+                white-space: nowrap;
+            }
+
+            @keyframes type {
+                0% {
+                    width: 0ch;
+                }
+
+                100% {
+                    width: 34ch;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            /* For mobile phones: */
+            .container {
+                color: white;
+                position: absolute;
+                border: 12px black;
+                margin: 10rem 10rem;
+            }
+
+            .container h1 {
+                margin-bottom: 2rem;
+                color: azure;
+                border-bottom: 0.25rem solid rgb(7, 53, 7);
+                font-weight: normal;
+                font-size: 1rem;
+                margin-right: 4rem;
+            }
+
+            .container input {
+                font-size: 12px;
+                margin-right: 4rem;
+            }
+
+            h2 {
+                white-space: nowrap;
+                font-size: smaller;
+                width: 0ch;
+                border-right: 1px solid burlywood;
+                overflow: hidden;
+                animation: type 8s steps(34) infinite alternate;
+            }
+
+            @keyframes type {
+                0% {
+                    width: 0ch;
+                }
+
+                50% {
+                    width: 34ch;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 992px) {
+
+            .container {
+                color: white;
+                position: absolute;
+                margin: 20rem 20rem 20rem 25rem;
+                border: 12px black;
+            }
+
+            .container h1 {
+                margin-bottom: 2rem;
+                color: azure;
+                border-bottom: 0.25rem solid rgb(7, 53, 7);
+                font-weight: normal;
+                font-size: 1rem;
+            }
+
+            .container input {
+                font-size: 12px;
+            }
+
+            h2 {
+                margin: 10rem 25rem;
+                font-size: 1.5rem;
+                width: 0ch;
+                border-right: 1px solid burlywood;
+                overflow: hidden;
+                animation: type 8s steps(34) infinite alternate;
+                white-space: nowrap;
+            }
+
+            @keyframes type {
+                0% {
+                    width: 0ch;
+                }
+
+                50% {
+                    width: 34ch;
+                }
+            }
+        }
+    </style>
+    <title>Login to Ethinicity</title>
+    <h2>This season give yourself Ethinic look.</h2>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Login to Ethinicity</h1>
+        <div class="form-control">
+            <form class="login_form" method="GET" name="form" action="index1.html"> <i class="far fa-envelope"></i>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required><br>
+        </div>
+        <div class="form-control"><i class="fas fa-key"></i>
+            <input type="password" name="password" id="password" placeholder="Enter your password" required><br>
+        </div>
+        <button class="btn">Sign in</button>
+        </form>
+    </div>
+</body>
+
+</html>
